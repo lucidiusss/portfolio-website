@@ -16,7 +16,7 @@
           mass: 0.5,
         },
       }"
-      v-if="colorMode.preference === 'dark'"
+      v-if="darkMode"
     >
       <button
         @click="changeColor()"
@@ -45,7 +45,7 @@
           mass: 0.5,
         },
       }"
-      v-if="colorMode.preference === 'light'"
+      v-if="!darkMode"
     >
       <button
         @click="changeColor()"
@@ -65,7 +65,15 @@
 const colorMode = useColorMode();
 console.log(colorMode.value);
 
+const darkMode = ref();
+
 const changeColor = () => {
-  colorMode.preference = colorMode.preference === "dark" ? "light" : "dark";
+  if (colorMode.value === "dark") {
+    colorMode.preference = "light";
+    darkMode.value = false;
+  } else {
+    colorMode.preference = "dark";
+    darkMode.value = true;
+  }
 };
 </script>
