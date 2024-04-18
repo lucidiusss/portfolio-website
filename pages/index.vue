@@ -1,5 +1,7 @@
 <template>
-  <main class="w-1/3 mx-auto mt-10 text-black dark:text-white transition-all">
+  <main
+    class="w-1/3 mx-auto mt-10 px-3 text-black dark:text-white transition-all"
+  >
     <div
       v-motion
       :initial="{
