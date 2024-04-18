@@ -41,7 +41,7 @@
           mass: 1,
         },
       }"
-      class="mt-10 flex items-center gap-6"
+      class="mt-10 flex items-center justify-between gap-6"
     >
       <div class="flex flex-col gap-1">
         <h1 class="text-4xl font-bold">Nikita Isaev</h1>

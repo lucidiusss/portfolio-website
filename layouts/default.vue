@@ -1,6 +1,6 @@
 <template>
   <header
-    class="sticky top-0 mx-auto flex items-center p-4 backdrop-blur transition-all text-black dark:text-white"
+    class="sticky z-10 top-0 mx-auto flex items-center p-4 backdrop-blur transition-all text-black dark:text-white"
   >
     <nav v-motion-fade-visible-once class="mx-auto flex items-center gap-52">
       <ul class="flex gap-4">
@@ -15,20 +15,28 @@
         <li class="hover:underline"><NuxtLink to="/works">Works</NuxtLink></li>
         <li class="hover:underline"><NuxtLink to="/posts">Posts</NuxtLink></li>
       </ul>
-      <div class="flex">
+      <div>
         <div
-          v-if="colorMode.preference === 'dark'"
           v-motion
-          :initial="{ opacity: 0, y: 100 }"
-          :enter="{ opacity: 1, y: 0, scale: 1 }"
-          :variants="{ custom: { scale: 2 } }"
-          :hovered="{ scale: 1.2 }"
-          :delay="200"
-          class="transition"
+          :initial="{
+            y: -30,
+            opacity: 0,
+          }"
+          :enter="{
+            y: 0,
+            opacity: 1,
+            transition: {
+              type: 'spring',
+              stiffness: 250,
+              damping: 10,
+              mass: 0.5,
+            },
+          }"
+          v-if="colorMode.preference === 'dark'"
         >
           <button
             @click="changeColor()"
-            class="transition py-2 px-2 rounded-md dark:bg-[#fbd38d] dark:hover:bg-[#f7bf5f] dark:active:bg-[#f9b94a]"
+            class="transition-all p-2 rounded-lg dark:bg-[#fbd38d] dark:hover:bg-[#f1aa53] dark:active:bg-[#eb8b34]"
           >
             <Icon
               size="24"
@@ -37,20 +45,27 @@
             />
           </button>
         </div>
-
         <div
-          v-if="colorMode.preference === 'light'"
           v-motion
-          :initial="{ opacity: 0, y: 100 }"
-          :enter="{ opacity: 1, y: 0, scale: 1 }"
-          :variants="{ custom: { scale: 2 } }"
-          :hovered="{ scale: 1.2 }"
-          :delay="200"
-          class="transition"
+          :initial="{
+            y: -30,
+            opacity: 0,
+          }"
+          :enter="{
+            y: 0,
+            opacity: 1,
+            transition: {
+              type: 'spring',
+              stiffness: 250,
+              damping: 10,
+              mass: 0.5,
+            },
+          }"
+          v-if="colorMode.preference === 'light'"
         >
           <button
             @click="changeColor()"
-            class="transition py-2 px-2 rounded-md bg-[#805ad5] hover:bg-[#6b46c1] active:bg-[#553c9a]"
+            class="transition-all p-2 rounded-lg bg-[#845cd4] hover:bg-[#6c44c4] active:bg-[#543c9c]"
           >
             <Icon
               size="24"
@@ -62,7 +77,6 @@
       </div>
     </nav>
   </header>
-
   <div>
     <slot />
   </div>

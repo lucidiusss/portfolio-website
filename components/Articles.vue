@@ -36,12 +36,14 @@
         streaming my favorite game - For Honor.
       </h2>
       <div class="flex justify-center">
-        <button
-          class="shadow-lg mt-5 py-3 px-2 font-semibold bg-[#c9716d] rounded-xl dark:text-[#1A202C] text-white hover:bg-[#a05e5c] active:bg-[#7d4844] transition-all"
-        >
-          My Portfolio
-          <Icon size="24" name="material-symbols:arrow-right-alt-rounded" />
-        </button>
+        <NuxtLink to="/works">
+          <button
+            class="shadow-lg mt-5 py-3 px-2 font-semibold bg-[#c9716d] rounded-xl dark:text-[#1A202C] text-white hover:bg-[#a05e5c] active:bg-[#7d4844] transition-all"
+          >
+            My Portfolio
+            <Icon size="24" name="material-symbols:arrow-right-alt-rounded" />
+          </button>
+        </NuxtLink>
       </div>
     </article>
     <article class="mb-10">
