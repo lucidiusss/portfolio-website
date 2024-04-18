@@ -63,7 +63,6 @@
 
 <script setup>
 const colorMode = useColorMode();
-console.log(colorMode.value);
 
 const darkMode = ref(true);
 

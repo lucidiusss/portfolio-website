@@ -23,15 +23,16 @@
       >
         About me
       </h1>
-      <h2 class="indent-5 text-stone-300">
+      <h2 class="indent-5 whitespace-normal text-stone-300">
         I am 21 years old. I started learning HTML, CSS, and JavaScript not so
         long ago. Currently learning Nuxt 3 and looking forward to work with it
         in the near future. Hopefully find a job 😇. Also I'm often going live
         on
         <NuxtLink
-          class="hover:underline font-semibold text-pink-500"
+          class="font-semibold text-pink-500 hover:underline underline-offset-4 transition-all"
           to="https://twitch.tv/lucidiusss"
-          >Twitch</NuxtLink
+        >
+          Twitch</NuxtLink
         >
         streaming my favorite game - For Honor.
       </h2>
@@ -52,23 +53,27 @@
       >
         Things I ❤️
       </h1>
-      <h2 class="indent-5">
+
+      <div class="flex flex-row">
         <NuxtLink
-          class="hover:underline font-semibold text-pink-500"
+          class="text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
           to="https://open.spotify.com/playlist/0pYWAtWUXYpW1Fxeq28uSC?si=eaade9b294994df6"
-          >Music</NuxtLink
-        >,
-        <NuxtLink
-          class="hover:underline font-semibold text-pink-500"
-          to="https://twitch.tv/lucidiusss"
-          >Streaming</NuxtLink
-        >,
-        <NuxtLink
-          class="hover:underline font-semibold text-pink-500"
-          to="https://github.com/lucidiusss"
-          >Programming</NuxtLink
         >
-      </h2>
+          Music </NuxtLink
+        >,
+        <NuxtLink
+          class="text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
+          to="https://twitch.tv/lucidiusss"
+        >
+          Streaming </NuxtLink
+        >,
+        <NuxtLink
+          class="text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
+          to="https://github.com/lucidiusss"
+        >
+          Coding
+        </NuxtLink>
+      </div>
     </article>
     <article class="mb-10">
       <h1

@@ -12,7 +12,7 @@
             <li>
               <div class="flex gap-2 mr-5 items-center">
                 <Icon name="💀" />
-                <p class="font-bold">Nikita Isaev</p>
+                <p class="font-bold text-black dark:text-white">Nikita Isaev</p>
               </div>
             </li>
           </NuxtLink>

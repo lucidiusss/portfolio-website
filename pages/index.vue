@@ -63,4 +63,14 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+useHead({
+  title: "Nikita Isaev",
+  meta: [
+    {
+      name: "description",
+      content: "Nikita Isaev - Junior Frontend Developer / Streamer",
+    },
+  ],
+});
+</script>

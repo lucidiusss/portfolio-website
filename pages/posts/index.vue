@@ -1,6 +1,6 @@
 <template>
   <main
-    class="w-1/3 mx-auto my-32 px-3 text-black dark:text-white transition-all"
+    class="w-1/3 mx-auto mt-32 px-3 text-black dark:text-white transition-all"
   >
     <h1
       v-motion
@@ -20,7 +20,7 @@
       }"
       class="indent-5 text-black dark:text-white text-xl"
     >
-      Works
+      Posts
     </h1>
     <div
       v-motion
@@ -38,21 +38,13 @@
           mass: 1,
         },
       }"
-      class="flex flex-row gap-4 flex-wrap"
+      class="mt-10"
     >
-      <Works />
+      <h1 class="text-4xl font-bold text-center">
+        this page is currently under construction.
+      </h1>
     </div>
   </main>
 </template>
 
-<script setup>
-useHead({
-  title: "Works | Nikita Isaev",
-  meta: [
-    {
-      name: "description",
-      content: "Nikita Isaev - Works",
-    },
-  ],
-});
-</script>
+<script setup></script>
