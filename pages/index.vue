@@ -1,6 +1,6 @@
 <template>
   <main
-    class="w-1/3 mx-auto mt-10 px-3 text-black dark:text-white transition-all"
+    class="w-1/3 mx-auto mt-32 px-3 text-black dark:text-white transition-all"
   >
     <div
       v-motion
@@ -47,7 +47,9 @@
     >
       <div class="flex flex-col gap-1">
         <h1 class="text-4xl font-bold">Nikita Isaev</h1>
-        <h2 class="text-md">Junior Frontend Developer / Streamer</h2>
+        <h2 class="text-md text-stone-400">
+          Junior Frontend Developer / Streamer
+        </h2>
       </div>
       <div class="w-24 h-24 flex">
         <img

@@ -1,25 +1,31 @@
 <template>
   <header
-    class="sticky w-2/4 z-10 top-0 mx-auto p-4 flex items-center backdrop-blur transition-all text-black dark:text-white"
+    class="fixed sm:w-full lg:w-2/4 z-10 top-0 lg:left-[25%] mx-auto p-4 flex items-center backdrop-blur transition-all text-black dark:text-white"
   >
-    <nav
-      v-motion-fade-visible-once
-      class="w-full flex justify-between items-center gap-52"
-    >
-      <ul class="flex gap-4">
-        <li>
-          <NuxtLink to="/">
-            <div class="flex gap-2 mr-5 items-center">
-              <Icon name="💀" />
-              <p class="font-bold">Nikita Isaev</p>
-            </div>
+    <div class="w-full">
+      <nav
+        v-motion-fade-visible-once
+        class="w-full flex justify-between items-center gap-52"
+      >
+        <ul class="flex gap-4">
+          <NuxtLink class="home-btn p-2 bg-transparent" to="/">
+            <li>
+              <div class="flex gap-2 mr-5 items-center">
+                <Icon name="💀" />
+                <p class="font-bold">Nikita Isaev</p>
+              </div>
+            </li>
           </NuxtLink>
-        </li>
-        <li class="hover:underline"><NuxtLink to="/works">Works</NuxtLink></li>
-        <li class="hover:underline"><NuxtLink to="/posts">Posts</NuxtLink></li>
-      </ul>
-      <ColorSwitchBtn />
-    </nav>
+          <NuxtLink to="/works" class="p-2 bg-transparent">
+            <li class="hover:underline transition-all">Works</li>
+          </NuxtLink>
+          <NuxtLink to="/posts" class="p-2 bg-transparent">
+            <li class="hover:underline transition-all">Posts</li>
+          </NuxtLink>
+        </ul>
+        <ColorSwitchBtn />
+      </nav>
+    </div>
   </header>
   <div>
     <slot />
@@ -27,3 +33,13 @@
 </template>
 
 <script setup></script>
+
+<style scoped>
+.router-link-exact-active {
+  @apply bg-[#c7716d] text-black rounded;
+}
+
+.home-btn {
+  @apply bg-transparent text-white rounded;
+}
+</style>

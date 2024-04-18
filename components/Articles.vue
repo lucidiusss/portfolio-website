@@ -23,11 +23,11 @@
       >
         About me
       </h1>
-      <h2 class="indent-5">
-        I was born in Saint-Petersburg, Russia. I am 21 years old. I started
-        learning HTML, CSS, and JavaScript not so long ago. I'm currently
-        learning Nuxt 3 and I'm looking forward to work with it in the near
-        future. Hopefully find a job 😇. Also I'm often going live on
+      <h2 class="indent-5 text-stone-300">
+        I am 21 years old. I started learning HTML, CSS, and JavaScript not so
+        long ago. Currently learning Nuxt 3 and looking forward to work with it
+        in the near future. Hopefully find a job 😇. Also I'm often going live
+        on
         <NuxtLink
           class="hover:underline font-semibold text-pink-500"
           to="https://twitch.tv/lucidiusss"
