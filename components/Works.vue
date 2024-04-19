@@ -4,8 +4,8 @@
       <div
         class="cursor-pointer w-full flex flex-col gap-4 items-center text-center"
       >
-        <div class="">
-          <img class="" :src="`${work.image}`" alt="" />
+        <div>
+          <img :src="work.mainImage" alt="" />
         </div>
         <div class="flex flex-col gap-4">
           <h1 class="text-lg">{{ work.name }}</h1>

@@ -1,8 +1,8 @@
 <template>
-  <div v-if="!loading" class="text-black dark:text-white mt-5">
+  <div class="text-black dark:text-white mt-5">
     <p class="indent-5">{{ thisWork.description }}</p>
     <div class="flex flex-col gap-1 ml-5 mt-5">
-      <div class="flex gap-2">
+      <div class="flex gap-2 items-center">
         <div>
           <span
             class="uppercase p-1 text-[#9ae6b4] bg-[#9ae6b4]/15 text-xs rounded"
@@ -36,17 +36,29 @@
       </div>
     </div>
     <div class="w-full">
-      <div class="w-full">
-        <img class="w-full" :src="thisWork.image" alt="" />
+      <div class="w-full flex flex-col gap-4">
+        <NuxtImg :src="`/${thisWork.link}1.png`" alt="" />
+        <NuxtImg :src="`/${thisWork.link}2.png`" alt="" />
+        <NuxtImg :src="`/${thisWork.link}3.png`" alt="" />
       </div>
     </div>
-  </div>
-  <div v-else>
-    <NuxtLoadingIndicator />
   </div>
 </template>
 
 <script setup>
 const thisWork = useThisWork();
-const loading = useLoading();
+const loading = ref(true);
+
+const nuxtApp = useNuxtApp();
+
+nuxtApp.hook("page:start", () => {
+  loading.value = true;
+});
+nuxtApp.hook("page:finish", () => {
+  loading.value = false;
+});
+
+useHead({
+  title: `${thisWork.value.name} | Nikita Isaev`,
+});
 </script>

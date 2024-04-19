@@ -1,11 +1,18 @@
 <template>
+  <div
+    class="container w-1/3 mx-auto text-center mt-32 px-3 text-black dark:text-white transition-all"
+    v-if="loading"
+  >
+    <h1 v-motion-slide-top class="">loading...</h1>
+  </div>
   <main
-    class="w-1/3 mx-auto mt-32 px-3 text-black dark:text-white transition-all"
+    v-if="!loading"
+    class="container w-1/3 mx-auto mt-32 px-3 text-black dark:text-white transition-all"
   >
     <div
       v-motion
       :initial="{
-        y: 100,
+        y: 200,
         opacity: 0,
       }"
       :enter="{
@@ -30,7 +37,7 @@
     <div
       v-motion
       :initial="{
-        y: 100,
+        y: 200,
         opacity: 0,
       }"
       :enter="{
@@ -54,7 +61,7 @@
       <div class="w-24 h-24 flex">
         <img
           class="rounded-full border-collapse border-2 border-gray-600 dark:border-gray-300"
-          src="../assets/images/me.jpg"
+          src="/avatar.jpg"
           alt=""
         />
       </div>
@@ -64,6 +71,17 @@
 </template>
 
 <script setup lang="ts">
+const loading = useLoading();
+
+const nuxtApp = useNuxtApp();
+
+nuxtApp.hook("page:loading:start", () => {
+  loading.value = true;
+});
+nuxtApp.hook("page:loading:end", () => {
+  loading.value = false;
+});
+
 useHead({
   title: "Nikita Isaev",
   meta: [

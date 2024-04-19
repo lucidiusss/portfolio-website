@@ -1,6 +1,6 @@
 <template>
   <main
-    class="w-1/3 mx-auto mt-32 px-3 text-black dark:text-white transition-all"
+    class="w-1/3 mx-auto container mt-32 px-3 text-black dark:text-white transition-all"
   >
     <h1
       v-motion

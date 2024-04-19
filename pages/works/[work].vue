@@ -2,7 +2,7 @@
   <div
     v-motion
     :initial="{
-      y: 100,
+      y: 200,
       opacity: 0,
     }"
     :enter="{
@@ -38,6 +38,7 @@
           }}</span>
         </h1>
       </div>
+
       <LazyWork />
     </div>
   </div>
@@ -45,23 +46,12 @@
 
 <script setup>
 const { work } = useRoute().params;
-useHead({
-  title: work.name,
-  meta: [
-    {
-      name: "description",
-      content: work.description,
-    },
-  ],
-});
-
 const thisWork = useThisWork();
 const loading = useLoading();
 
-const fetchWork = async () => {
-  loading.value = true;
+const fetchWork = () => {
   try {
-    const { data: w } = await useFetch(
+    const { data: w } = useFetch(
       `https://bb4599e9b6e5bd96.mokky.dev/works?link=${work}`
     );
     thisWork.value = w.value[0];
@@ -71,5 +61,9 @@ const fetchWork = async () => {
     loading.value = false;
   }
 };
+
 fetchWork();
+onMounted(() => {
+  fetchWork();
+});
 </script>

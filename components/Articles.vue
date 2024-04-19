@@ -2,7 +2,7 @@
   <div
     v-motion
     :initial="{
-      y: 100,
+      y: 200,
       opacity: 0,
     }"
     :enter="{
@@ -29,7 +29,7 @@
         in the near future. Hopefully find a job 😇. Also I'm often going live
         on
         <NuxtLink
-          class="font-semibold text-pink-500 hover:underline underline-offset-4 transition-all"
+          class="font-semibold dark:text-pink-500 text-[#3d7aed] hover:underline underline-offset-4 transition-all"
           to="https://twitch.tv/lucidiusss"
         >
           Twitch</NuxtLink
@@ -39,7 +39,7 @@
       <div class="flex justify-center">
         <NuxtLink to="/works">
           <button
-            class="shadow-lg mt-5 py-3 px-2 font-semibold bg-[#c9716d] rounded-xl dark:text-[#1A202C] text-white hover:bg-[#a05e5c] active:bg-[#7d4844] transition-all"
+            class="shadow-lg mt-5 py-3 px-2 font-semibold dark:bg-pink-500 bg-[#3d7aed] hover:bg-[#3d7aed]/50 active:bg-[#3d7aed]/60 rounded-xl dark:text-[#1A202C] text-white dark:hover:bg-pink-500/50 dark:active:bg-pink-500/60 transition-all"
           >
             My Portfolio
             <Icon size="24" name="material-symbols:arrow-right-alt-rounded" />
@@ -56,19 +56,19 @@
 
       <div class="flex flex-row">
         <NuxtLink
-          class="text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
+          class="text-[#3d7aed] dark:text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
           to="https://open.spotify.com/playlist/0pYWAtWUXYpW1Fxeq28uSC?si=eaade9b294994df6"
         >
           Music </NuxtLink
         >,
         <NuxtLink
-          class="text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
+          class="text-[#3d7aed] dark:text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
           to="https://twitch.tv/lucidiusss"
         >
           Streaming </NuxtLink
         >,
         <NuxtLink
-          class="text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
+          class="text-[#3d7aed] dark:text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
           to="https://github.com/lucidiusss"
         >
           Coding

@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed sm:w-full lg:w-2/4 z-10 top-0 lg:left-[25%] mx-auto p-2 flex items-center backdrop-blur transition-all text-black dark:text-white"
+    class="fixed sm:w-full lg:w-2/4 z-10 top-0 lg:left-[25%] mx-auto p-2 flex items-center backdrop-blur transition-all text-black dark:text-white container"
   >
     <div class="w-full">
       <nav

@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxtjs/color-mode",
     "@vueuse/motion/nuxt",
+    "@nuxt/image",
   ],
   colorMode: {
     classSuffix: "",
