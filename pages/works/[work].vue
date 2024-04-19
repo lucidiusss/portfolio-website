@@ -33,15 +33,18 @@
         />
         <h1 class="text-xl text-black dark:text-white font-bold">
           {{ thisWork.name }}
+          <span class="text-xs bg-stone-700 p-1 rounded">{{
+            thisWork.date
+          }}</span>
         </h1>
       </div>
+      <LazyWork />
     </div>
   </div>
 </template>
 
 <script setup>
 const { work } = useRoute().params;
-
 useHead({
   title: work.name,
   meta: [
@@ -52,8 +55,21 @@ useHead({
   ],
 });
 
-//fetch the work
-const url = `https://bb4599e9b6e5bd96.mokky.dev/works?link=` + work;
-const { data: w } = await useFetch(url);
-const thisWork = w.value[0];
+const thisWork = useThisWork();
+const loading = useLoading();
+
+const fetchWork = async () => {
+  loading.value = true;
+  try {
+    const { data: w } = await useFetch(
+      `https://bb4599e9b6e5bd96.mokky.dev/works?link=${work}`
+    );
+    thisWork.value = w.value[0];
+  } catch (err) {
+    console.log(err);
+  } finally {
+    loading.value = false;
+  }
+};
+fetchWork();
 </script>

@@ -23,7 +23,7 @@
       >
         About me
       </h1>
-      <h2 class="indent-5 whitespace-normal text-stone-300">
+      <h2 class="indent-5 whitespace-normal dark:text-stone-300 text-stone-">
         I am 21 years old. I started learning HTML, CSS, and JavaScript not so
         long ago. Currently learning Nuxt 3 and looking forward to work with it
         in the near future. Hopefully find a job 😇. Also I'm often going live

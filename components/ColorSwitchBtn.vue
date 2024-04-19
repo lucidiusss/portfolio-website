@@ -64,7 +64,7 @@
 <script setup>
 const colorMode = useColorMode();
 
-const darkMode = ref(true);
+const darkMode = useDarkMode();
 
 const changeColor = () => {
   if (colorMode.value === "dark") {
