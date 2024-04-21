@@ -42,27 +42,21 @@
             class="max-w-[500px]"
             :src="`/${props.work.link}1.png`"
             alt=""
-            @load="isLoading"
           />
-          <div v-if="isLoading">loading...</div>
         </div>
         <div>
           <NuxtImg
             class="max-w-[500px]"
             :src="`/${props.work.link}1.png`"
             alt=""
-            @load="isLoading"
           />
-          <div v-if="isLoading">loading...</div>
         </div>
         <div>
           <NuxtImg
             class="max-w-[500px]"
             :src="`/${props.work.link}1.png`"
             alt=""
-            @load="isLoading"
           />
-          <div v-if="isLoading">loading...</div>
         </div>
       </div>
     </div>
@@ -70,8 +64,6 @@
 </template>
 
 <script setup>
-const isLoading = useState("isLoading", () => false);
-
 const props = defineProps({
   currentWork: {
     type: String,
