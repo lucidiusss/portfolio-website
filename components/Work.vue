@@ -1,6 +1,6 @@
 <template>
-  <div class="text-black dark:text-white mt-5">
-    <p class="indent-5">{{ thisWork.description }}</p>
+  <div class="text-black dark:text-white my-12">
+    <p class="indent-5">{{ props.work.description }}</p>
     <div class="flex flex-col gap-1 ml-5 mt-5">
       <div class="flex gap-2 items-center">
         <div>
@@ -11,8 +11,8 @@
         </div>
         <NuxtLink
           class="hover:underline text-pink-500 underline-offset-4"
-          :to="thisWork.website"
-          >{{ thisWork.website }}</NuxtLink
+          :to="props.work.website"
+          >{{ props.work.website }}</NuxtLink
         >
         <Icon class="text-pink-500" name="iconamoon:link-external" />
       </div>
@@ -23,7 +23,7 @@
             >platform</span
           >
         </div>
-        <p>{{ thisWork.platform }}</p>
+        <p>{{ props.work.platform }}</p>
       </div>
       <div class="flex gap-2">
         <div>
@@ -32,33 +32,59 @@
             >stack</span
           >
         </div>
-        <p>{{ thisWork.stack }}</p>
+        <p>{{ props.work.stack }}</p>
       </div>
     </div>
-    <div class="w-full">
-      <div class="w-full flex flex-col gap-4">
-        <NuxtImg :src="`/${thisWork.link}1.png`" alt="" />
-        <NuxtImg :src="`/${thisWork.link}2.png`" alt="" />
-        <NuxtImg :src="`/${thisWork.link}3.png`" alt="" />
+    <div class="w-full flex items-center justify-center">
+      <div class="w-full flex items-center flex-col gap-4">
+        <div>
+          <NuxtImg
+            class="max-w-[500px]"
+            :src="`/${props.work.link}1.png`"
+            alt=""
+            @load="isLoading"
+          />
+          <div v-if="isLoading">loading...</div>
+        </div>
+        <div>
+          <NuxtImg
+            class="max-w-[500px]"
+            :src="`/${props.work.link}1.png`"
+            alt=""
+            @load="isLoading"
+          />
+          <div v-if="isLoading">loading...</div>
+        </div>
+        <div>
+          <NuxtImg
+            class="max-w-[500px]"
+            :src="`/${props.work.link}1.png`"
+            alt=""
+            @load="isLoading"
+          />
+          <div v-if="isLoading">loading...</div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-const thisWork = useThisWork();
-const loading = ref(true);
+const isLoading = useState("isLoading", () => false);
 
-const nuxtApp = useNuxtApp();
-
-nuxtApp.hook("page:start", () => {
-  loading.value = true;
+const props = defineProps({
+  currentWork: {
+    type: String,
+    required: true,
+  },
+  work: {
+    type: Object,
+    required: true,
+  },
 });
-nuxtApp.hook("page:finish", () => {
-  loading.value = false;
-});
+console.log(props.currentWork);
 
 useHead({
-  title: `${thisWork.value.name} | Nikita Isaev`,
+  title: `${props.work.name} | Nikita Isaev`,
 });
 </script>

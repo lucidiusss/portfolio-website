@@ -36,7 +36,7 @@
 
 <style scoped>
 .router-link-exact-active {
-  @apply bg-[#c7716d] text-black rounded;
+  @apply bg-pink-500 text-black rounded;
 }
 
 .home-btn {

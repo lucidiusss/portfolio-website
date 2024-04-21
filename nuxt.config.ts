@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@vueuse/motion/nuxt",
     "@nuxt/image",
+    "@nuxt/ui",
   ],
   colorMode: {
     classSuffix: "",

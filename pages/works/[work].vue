@@ -38,20 +38,28 @@
           }}</span>
         </h1>
       </div>
-
-      <LazyWork />
     </div>
+    <Work :work="thisWork" :currentWork="work" />
   </div>
 </template>
 
 <script setup>
 const { work } = useRoute().params;
-const thisWork = useThisWork();
 const loading = useLoading();
+const thisWork = ref();
 
-const fetchWork = () => {
+const nuxtApp = useNuxtApp();
+
+nuxtApp.hook("page:start", () => {
+  loading.value = true;
+});
+nuxtApp.hook("page:finish", () => {
+  loading.value = false;
+});
+
+const fetchWork = async () => {
   try {
-    const { data: w } = useFetch(
+    const { data: w } = await useFetch(
       `https://bb4599e9b6e5bd96.mokky.dev/works?link=${work}`
     );
     thisWork.value = w.value[0];
@@ -63,7 +71,4 @@ const fetchWork = () => {
 };
 
 fetchWork();
-onMounted(() => {
-  fetchWork();
-});
 </script>

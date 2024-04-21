@@ -2,9 +2,7 @@
   <div
     class="container w-1/3 mx-auto text-center mt-32 px-3 text-black dark:text-white transition-all"
     v-if="loading"
-  >
-    loading...
-  </div>
+  ></div>
   <main
     v-if="!loading"
     class="w-1/3 mx-auto my-32 px-3 text-black dark:text-white transition-all"
@@ -47,7 +45,7 @@
       }"
       class="flex flex-row gap-4 flex-wrap"
     >
-      <Works />
+      <Works :works="works" />
     </div>
   </main>
 </template>
@@ -63,6 +61,10 @@ nuxtApp.hook("page:loading:start", () => {
 nuxtApp.hook("page:loading:end", () => {
   loading.value = false;
 });
+
+const { data: works } = await useFetch(
+  "https://bb4599e9b6e5bd96.mokky.dev/works"
+);
 
 useHead({
   title: "Works | Nikita Isaev",
