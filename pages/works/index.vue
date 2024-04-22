@@ -1,11 +1,11 @@
 <template>
   <div
-    class="container w-1/3 mx-auto text-center mt-32 px-3 text-black dark:text-white transition-all"
+    class="w-1/3 mx-auto text-center mt-20 px-3 text-black dark:text-white transition-all"
     v-if="loading"
   ></div>
   <main
     v-if="!loading"
-    class="w-1/3 mx-auto my-32 px-3 text-black dark:text-white transition-all"
+    class="2xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-full xs:w-full sm:w-full w-1/3 mx-auto my-20 p-2 text-black dark:text-white transition-all"
   >
     <h1
       v-motion

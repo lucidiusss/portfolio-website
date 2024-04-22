@@ -1,13 +1,11 @@
 <template>
   <div
-    class="container w-1/3 mx-auto text-center mt-32 px-3 text-black dark:text-white transition-all"
+    class="w-2-3 mx-auto text-center mt-20 px-3 text-black dark:text-white transition-all"
     v-if="loading"
-  >
-    <h1 v-motion-slide-top class=""></h1>
-  </div>
+  ></div>
   <main
     v-if="!loading"
-    class="container w-1/3 mx-auto mt-32 px-3 text-black dark:text-white transition-all"
+    class="2xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full max-sm:w-full mx-auto mt-20 p-2 text-black dark:text-white transition-all"
   >
     <div
       v-motion
@@ -28,10 +26,9 @@
       class="flex"
     >
       <h1
-        class="rounded-xl shadow-lg text-center transition-all dark:bg-[#313134] bg-[#f5f0e8] p-5 mx-auto"
+        class="rounded-xl shadow-lg text-center transition-all dark:bg-[#313134] bg-[#f5f0e8] p-5 mx-auto max-sm:w-full max-sm:text-sm"
       >
-        Hello, I`m a junior frontend developer based in Saint-Petersburg,
-        Russia!
+        Hi, I'm a junior frontend developer based in Saint-Petersburg, Russia!
       </h1>
     </div>
     <div
@@ -50,17 +47,17 @@
           mass: 1,
         },
       }"
-      class="mt-10 flex items-center justify-between gap-6"
+      class="mt-10 flex items-center mx-auto w-full justify-between gap-6"
     >
-      <div class="flex flex-col gap-1">
-        <h1 class="text-4xl font-bold">Nikita Isaev</h1>
-        <h2 class="text-md dark:text-stone-400 text-stone-500">
+      <div class="flex flex-col gap-1 text-center max-sm:w-3/4 w-1/2">
+        <h1 class="text-4xl font-bold max-sm:text-lg">Nikita Isaev</h1>
+        <h2 class="text-md max-sm:text-xs dark:text-stone-400 text-stone-500">
           Junior Frontend Developer / Streamer
         </h2>
       </div>
-      <div class="w-24 h-24 flex">
+      <div class="flex items-center justify-center max-sm:w-1/4 w-1/2">
         <img
-          class="rounded-full border-collapse border-2 border-gray-600 dark:border-gray-300"
+          class="rounded-full max-sm:w-16 max-sm:h-16 w-32 h-32 border-2 border-gray-600 dark:border-gray-300"
           src="/avatar.jpg"
           alt=""
         />

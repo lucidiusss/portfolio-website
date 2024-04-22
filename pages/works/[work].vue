@@ -16,24 +16,24 @@
       },
     }"
     v-if="thisWork"
-    class="mx-auto container w-1/3 mt-32"
+    class="mx-auto 2xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-full xs:w-full sm:w-full mt-20"
   >
-    <div>
+    <div class="p-4">
       <div class="flex gap-1 items-center">
         <NuxtLink
-          class="text-pink-500 hover:underline underline-offset-4 transition-all"
+          class="dark:text-pink-500 text-[#3d7aed] max-sm:text-sm hover:underline underline-offset-4 transition-all"
           to="/works"
         >
           Works
         </NuxtLink>
         <Icon
-          color="white"
+          :color="colorMode.preference === 'dark' ? 'white' : 'black'"
           size="12"
           name="material-symbols:arrow-forward-ios"
         />
-        <h1 class="text-xl text-black dark:text-white font-bold">
+        <h1 class="text-xl max-sm:text-md text-black dark:text-white font-bold">
           {{ thisWork.name }}
-          <span class="text-xs bg-stone-700 p-1 rounded">{{
+          <span class="text-xs dark:bg-stone-700 bg-white p-1 rounded">{{
             thisWork.date
           }}</span>
         </h1>
@@ -44,6 +44,8 @@
 </template>
 
 <script setup>
+const colorMode = useColorMode();
+
 const { work } = useRoute().params;
 const loading = useLoading();
 const thisWork = ref();

@@ -1,6 +1,6 @@
 <template>
   <main
-    class="w-1/3 mx-auto container mt-32 px-3 text-black dark:text-white transition-all"
+    class="2xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full max-sm:w-full w-1/3 mx-auto mt-20 p-2 text-black dark:text-white transition-all"
   >
     <h1
       v-motion
@@ -40,12 +40,11 @@
       }"
       class="mt-10"
     >
-      <h1 class="text-4xl font-bold text-center">there is no posts yet.</h1>
+      <h1 class="text-4xl max-sm:text-md font-bold text-center">
+        there are no posts yet.
+      </h1>
     </div>
-    <div>{{ data }}</div>
   </main>
 </template>
 
-<script setup>
-const { data } = await useFetch("/api/stats");
-</script>
+<script setup></script>
