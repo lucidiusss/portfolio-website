@@ -10,7 +10,7 @@
   <div
     ref="target"
     v-if="modal"
-    class="absolute z-20 top-15 right-0 bg-white rounded-xl dark:bg-[#2b2b2e]"
+    class="absolute z-20 top-16 right-0 bg-white rounded-xl dark:bg-[#2b2b2e]"
   >
     <nav>
       <ul @click="showModal()" class="flex flex-col items-center text-center">
