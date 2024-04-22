@@ -12,7 +12,7 @@
     <div
       v-motion
       :initial="{
-        y: 200,
+        y: 100,
         opacity: 0,
       }"
       :enter="{
@@ -37,7 +37,7 @@
     <div
       v-motion
       :initial="{
-        y: 200,
+        y: 100,
         opacity: 0,
       }"
       :enter="{
