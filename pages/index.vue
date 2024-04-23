@@ -26,7 +26,7 @@
       class="flex"
     >
       <h1
-        class="rounded-xl shadow-lg text-center transition-all dark:bg-[#313134] bg-[#f5f0e8] p-5 mx-auto max-sm:w-full max-sm:text-sm"
+        class="rounded-xl shadow-lg text-center transition ease-in-out duration-500 dark:bg-[#313134] bg-[#f5f0e8] p-5 mx-auto max-sm:w-full max-sm:text-sm"
       >
         Hi, I'm a junior frontend developer based in Saint-Petersburg, Russia!
       </h1>
