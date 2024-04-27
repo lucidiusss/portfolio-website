@@ -47,4 +47,13 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+onBeforeMount(() => {
+  nextTick(async () => {
+    const { data } = await $fetch(
+      "https://api.tracker.gg/api/v2/for-honor/standard/profile/uplay/./lucidiusss/"
+    );
+    console.log(data);
+  });
+});
+</script>
