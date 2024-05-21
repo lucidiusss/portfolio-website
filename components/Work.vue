@@ -44,23 +44,23 @@
       <div class="w-full flex items-center flex-col gap-4">
         <div>
           <NuxtImg
+            preload
             class="max-sm:w-62"
             :src="`/${props.work.link}1.png`"
-            alt=""
           />
         </div>
         <div>
           <NuxtImg
+            preload
             class="max-sm:w-62"
             :src="`/${props.work.link}1.png`"
-            alt=""
           />
         </div>
         <div>
           <NuxtImg
+            preload
             class="max-sm:w-62"
             :src="`/${props.work.link}1.png`"
-            alt=""
           />
         </div>
       </div>
