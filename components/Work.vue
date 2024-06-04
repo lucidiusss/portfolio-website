@@ -44,6 +44,7 @@
       <div class="w-full flex items-center flex-col gap-4">
         <div>
           <NuxtImg
+            :placeholder="blurredImage"
             preload
             class="max-sm:w-62"
             :src="`/${props.work.link}1.png`"
@@ -51,6 +52,7 @@
         </div>
         <div>
           <NuxtImg
+            :placeholder="blurredImage1"
             preload
             class="max-sm:w-62"
             :src="`/${props.work.link}2.png`"
@@ -58,6 +60,7 @@
         </div>
         <div>
           <NuxtImg
+            :placeholder="blurredImage2"
             preload
             class="max-sm:w-62"
             :src="`/${props.work.link}3.png`"
@@ -78,6 +81,32 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+});
+
+const imgTransformer = useImage();
+const theImage = ref(`/${props.work.link}1.png`);
+const theImage1 = ref(`/${props.work.link}2.png`);
+const theImage2 = ref(`/${props.work.link}3.png`);
+
+const blurredImage = imgTransformer(theImage.value, {
+  h: 10,
+  w: 20,
+  blur: 4,
+  q: 30,
+});
+
+const blurredImage1 = imgTransformer(theImage1.value, {
+  h: 10,
+  w: 20,
+  blur: 4,
+  q: 30,
+});
+
+const blurredImage2 = imgTransformer(theImage2.value, {
+  h: 10,
+  w: 20,
+  blur: 4,
+  q: 30,
 });
 
 useHead({

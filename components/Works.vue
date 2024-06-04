@@ -9,7 +9,12 @@
     >
       <div>
         <NuxtLink :to="`/works/${work.link}`">
-          <img :src="work.mainImage" alt="" />
+          <img
+            preload
+            :placeholder="blurredImage"
+            :src="work.mainImage"
+            alt=""
+          />
         </NuxtLink>
       </div>
       <div class="flex flex-col gap-4">
@@ -28,5 +33,15 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+});
+
+const imgTransformer = useImage();
+const theImage = ref(work.mainImage);
+
+const blurredImage = imgTransformer(theImage.value, {
+  h: 10,
+  w: 20,
+  blur: 4,
+  q: 30,
 });
 </script>

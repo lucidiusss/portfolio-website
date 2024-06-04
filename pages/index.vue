@@ -57,6 +57,7 @@
       </div>
       <div class="flex items-center justify-center max-sm:w-1/4 w-1/2">
         <NuxtImg
+          :placeholder="blurredImage"
           preload
           class="rounded-full object-cover max-sm:w-16 max-sm:h-16 w-32 h-32 border-2 border-gray-600 dark:border-gray-300"
           src="/avatar.jpg"
@@ -78,6 +79,16 @@ nuxtApp.hook("page:loading:start", () => {
 });
 nuxtApp.hook("page:loading:end", () => {
   loading.value = false;
+});
+
+const imgTransformer = useImage();
+const theImage = ref("/avatar.jpg");
+
+const blurredImage = imgTransformer(theImage.value, {
+  h: 10,
+  w: 20,
+  blur: 4,
+  q: 30,
 });
 
 useHead({
