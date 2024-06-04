@@ -4,7 +4,7 @@
 
 body {
   font-family: "Roboto Mono", monospace;
-  @apply bg-[#f0e7db] transition ease-in-out duration-500 dark:bg-[#202023];
+  @apply bg-[#f0e7db] transition ease-in-out duration-200 dark:bg-[#202023];
 }
 
 a,
@@ -22,4 +22,10 @@ ul {
 
 html {
   scrollbar-gutter: stable both-edges;
+}
+
+@layer components {
+  .custom-transiiton {
+    @apply transition ease-in-out duration-200;
+  }
 }

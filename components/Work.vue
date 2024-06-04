@@ -53,14 +53,14 @@
           <NuxtImg
             preload
             class="max-sm:w-62"
-            :src="`/${props.work.link}1.png`"
+            :src="`/${props.work.link}2.png`"
           />
         </div>
         <div>
           <NuxtImg
             preload
             class="max-sm:w-62"
-            :src="`/${props.work.link}1.png`"
+            :src="`/${props.work.link}3.png`"
           />
         </div>
       </div>

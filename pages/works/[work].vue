@@ -21,7 +21,7 @@
     <div class="p-4">
       <div class="flex gap-1 items-center">
         <NuxtLink
-          class="dark:text-pink-500 text-[#3d7aed] max-sm:text-sm hover:underline underline-offset-4 transition-all"
+          class="dark:text-pink-500 text-[#3d7aed] max-sm:text-sm hover:underline underline-offset-4 custom-transition"
           to="/works"
         >
           Works
@@ -72,5 +72,9 @@ const fetchWork = async () => {
   }
 };
 
-fetchWork();
+onMounted(() => {
+  nextTick(async () => {
+    fetchWork();
+  });
+});
 </script>

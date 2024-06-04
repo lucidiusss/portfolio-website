@@ -1,6 +1,6 @@
 <template>
   <main
-    class="2xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full max-sm:w-full w-1/3 mx-auto mt-20 p-2 text-black dark:text-white transition-all"
+    class="2xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full max-sm:w-full w-1/3 mx-auto mt-20 p-2 text-black dark:text-white custom-transition"
   >
     <h1
       v-motion

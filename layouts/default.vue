@@ -1,6 +1,6 @@
 <template>
   <header
-    class="2xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full xs:w-full fixed top-0 left-1/2 -translate-x-1/2 z-10 p-2 flex items-center backdrop-blur transition-all text-black dark:text-white"
+    class="2xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full xs:w-full fixed top-0 left-1/2 -translate-x-1/2 z-10 p-2 flex items-center backdrop-blur custom-transition text-black dark:text-white"
   >
     <div class="w-full">
       <nav

@@ -20,7 +20,7 @@
     >
       <button
         @click="changeColor()"
-        class="border border-transparent transition-all p-2 rounded-lg dark:bg-[#fbd38d] dark:hover:bg-[#f1aa53] dark:active:bg-[#eb8b34]"
+        class="border border-transparent custom-transition p-2 rounded-lg dark:bg-[#fbd38d] dark:hover:bg-[#f1aa53] dark:active:bg-[#eb8b34]"
       >
         <Icon
           size="24"
@@ -49,7 +49,7 @@
     >
       <button
         @click="changeColor()"
-        class="border border-transparent transition-all p-2 rounded-lg bg-[#845cd4] hover:bg-[#6c44c4] active:bg-[#543c9c]"
+        class="border border-transparent custom-transition p-2 rounded-lg bg-[#845cd4] hover:bg-[#6c44c4] active:bg-[#543c9c]"
       >
         <Icon
           size="24"

@@ -1,11 +1,11 @@
 <template>
   <div
-    class="w-2-3 mx-auto text-center mt-20 px-3 text-black dark:text-white transition-all"
+    class="w-2-3 mx-auto text-center mt-20 px-3 text-black dark:text-white custom-transition"
     v-if="loading"
   ></div>
   <main
     v-if="!loading"
-    class="2xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full max-sm:w-full mx-auto mt-20 p-2 text-black dark:text-white transition-all"
+    class="2xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full max-sm:w-full mx-auto mt-20 p-2 text-black dark:text-white custom-transition"
   >
     <div
       v-motion
@@ -26,7 +26,7 @@
       class="flex"
     >
       <h1
-        class="rounded-xl shadow-lg text-center transition ease-in-out duration-500 dark:bg-[#313134] bg-[#f5f0e8] p-5 mx-auto max-sm:w-full max-sm:text-sm"
+        class="rounded-xl shadow-lg text-center custom-transition dark:bg-[#313134] bg-[#f5f0e8] p-5 mx-auto max-sm:w-full max-sm:text-sm"
       >
         Hi, I'm a junior frontend developer based in Saint-Petersburg, Russia!
       </h1>
@@ -56,8 +56,9 @@
         </h2>
       </div>
       <div class="flex items-center justify-center max-sm:w-1/4 w-1/2">
-        <img
-          class="rounded-full max-sm:w-16 max-sm:h-16 w-32 h-32 border-2 border-gray-600 dark:border-gray-300"
+        <NuxtImg
+          preload
+          class="rounded-full object-cover max-sm:w-16 max-sm:h-16 w-32 h-32 border-2 border-gray-600 dark:border-gray-300"
           src="/avatar.jpg"
           alt=""
         />

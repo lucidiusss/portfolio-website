@@ -31,7 +31,7 @@
         in the near future. Hopefully find a job 😇. Also I'm often going live
         on
         <NuxtLink
-          class="font-semibold dark:text-pink-500 text-[#3d7aed] hover:underline underline-offset-4 transition-all"
+          class="font-semibold dark:text-pink-500 text-[#3d7aed] hover:underline underline-offset-4 custom-transition"
           to="https://twitch.tv/lucidiusss"
         >
           Twitch</NuxtLink
@@ -41,7 +41,7 @@
       <div class="flex justify-center">
         <NuxtLink to="/works">
           <button
-            class="shadow-lg max-sm:text-sm mt-5 max-sm:p-2 py-3 px-2 font-semibold dark:bg-pink-500 bg-[#3d7aed] hover:bg-[#3d7aed]/50 active:bg-[#3d7aed]/60 rounded-xl dark:text-[#1A202C] text-white dark:hover:bg-pink-500/50 dark:active:bg-pink-500/60 transition-all"
+            class="shadow-lg max-sm:text-sm mt-5 max-sm:p-2 py-3 px-2 font-semibold dark:bg-pink-500 bg-[#3d7aed] hover:bg-[#3d7aed]/50 active:bg-[#3d7aed]/60 rounded-xl dark:text-[#1A202C] text-white dark:hover:bg-pink-500/50 dark:active:bg-pink-500/60 custom-transition"
           >
             My Portfolio
             <Icon
@@ -61,19 +61,19 @@
 
       <div class="flex flex-row max-sm:text-sm justify-center">
         <NuxtLink
-          class="text-[#3d7aed] dark:text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
+          class="text-[#3d7aed] dark:text-pink-500 hover:underline underline-offset-4 custom-transition font-semibold"
           to="https://open.spotify.com/playlist/0pYWAtWUXYpW1Fxeq28uSC?si=eaade9b294994df6"
         >
           Music </NuxtLink
         >,
         <NuxtLink
-          class="text-[#3d7aed] dark:text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
+          class="text-[#3d7aed] dark:text-pink-500 hover:underline underline-offset-4 custom-transition font-semibold"
           to="https://twitch.tv/lucidiusss"
         >
           Streaming </NuxtLink
         >,
         <NuxtLink
-          class="text-[#3d7aed] dark:text-pink-500 hover:underline underline-offset-4 transition-all font-semibold"
+          class="text-[#3d7aed] dark:text-pink-500 hover:underline underline-offset-4 custom-transition font-semibold"
           to="https://github.com/lucidiusss"
         >
           Coding
@@ -89,7 +89,7 @@
       <div class="flex flex-col items-center text-center">
         <div class="inline-flex">
           <NuxtLink
-            class="flex items-center gap-3 dark:text-[#81e6d9] dark:hover:bg-[#81e6d9]/10 dark:active:bg-[#81e6d9]/20 py-2 px-2 rounded-lg transition-all text-[#2c7a7b] hover:bg-[#2c7a7b]/10 active:bg-[#2c7a7b]/20"
+            class="flex items-center gap-3 dark:text-[#81e6d9] dark:hover:bg-[#81e6d9]/10 dark:active:bg-[#81e6d9]/20 py-2 px-2 rounded-lg custom-transition text-[#2c7a7b] hover:bg-[#2c7a7b]/10 active:bg-[#2c7a7b]/20"
             to="https://instagram.com/lucidiusss"
           >
             <Icon size="18" name="mdi:instagram" />
@@ -98,7 +98,7 @@
         </div>
         <div class="inline-flex">
           <NuxtLink
-            class="flex items-center gap-3 dark:text-[#81e6d9] dark:hover:bg-[#81e6d9]/10 dark:active:bg-[#81e6d9]/20 py-2 px-2 rounded-lg transition-all text-[#2c7a7b] hover:bg-[#2c7a7b]/10 active:bg-[#2c7a7b]/20"
+            class="flex items-center gap-3 dark:text-[#81e6d9] dark:hover:bg-[#81e6d9]/10 dark:active:bg-[#81e6d9]/20 py-2 px-2 rounded-lg custom-transition text-[#2c7a7b] hover:bg-[#2c7a7b]/10 active:bg-[#2c7a7b]/20"
             to="https://github.com/lucidiusss"
           >
             <Icon size="18" name="mdi:github" />
@@ -107,7 +107,7 @@
         </div>
         <div class="inline-flex">
           <NuxtLink
-            class="flex items-center gap-3 dark:text-[#81e6d9] dark:hover:bg-[#81e6d9]/10 dark:active:bg-[#81e6d9]/20 py-2 px-2 rounded-lg transition-all text-[#2c7a7b] hover:bg-[#2c7a7b]/10 active:bg-[#2c7a7b]/20"
+            class="flex items-center gap-3 dark:text-[#81e6d9] dark:hover:bg-[#81e6d9]/10 dark:active:bg-[#81e6d9]/20 py-2 px-2 rounded-lg custom-transition text-[#2c7a7b] hover:bg-[#2c7a7b]/10 active:bg-[#2c7a7b]/20"
             to="https://vk.com/lucidiusss"
           >
             <Icon size="18" name="mdi:vk" />
@@ -116,7 +116,7 @@
         </div>
         <div class="inline-flex">
           <NuxtLink
-            class="flex items-center gap-3 dark:text-[#81e6d9] dark:hover:bg-[#81e6d9]/10 dark:active:bg-[#81e6d9]/20 py-2 px-2 rounded-lg transition-all text-[#2c7a7b] hover:bg-[#2c7a7b]/10 active:bg-[#2c7a7b]/20"
+            class="flex items-center gap-3 dark:text-[#81e6d9] dark:hover:bg-[#81e6d9]/10 dark:active:bg-[#81e6d9]/20 py-2 px-2 rounded-lg custom-transition text-[#2c7a7b] hover:bg-[#2c7a7b]/10 active:bg-[#2c7a7b]/20"
             to="https://twitch.tv/lucidiusss"
           >
             <Icon size="18" name="mdi:twitch" />
@@ -125,7 +125,7 @@
         </div>
         <div class="inline-flex">
           <NuxtLink
-            class="flex items-center gap-3 dark:text-[#81e6d9] dark:hover:bg-[#81e6d9]/10 dark:active:bg-[#81e6d9]/20 py-2 px-2 rounded-lg transition-all text-[#2c7a7b] hover:bg-[#2c7a7b]/10 active:bg-[#2c7a7b]/20"
+            class="flex items-center gap-3 dark:text-[#81e6d9] dark:hover:bg-[#81e6d9]/10 dark:active:bg-[#81e6d9]/20 py-2 px-2 rounded-lg custom-transition text-[#2c7a7b] hover:bg-[#2c7a7b]/10 active:bg-[#2c7a7b]/20"
             to="https://t.me/lucidiusss"
           >
             <Icon size="18" name="mdi:telegram" />
@@ -134,7 +134,7 @@
         </div>
         <div class="inline-flex">
           <NuxtLink
-            class="flex items-center gap-3 dark:text-[#81e6d9] text-[#2c7a7b] py-2 px-2 rounded-lg transition-all"
+            class="flex items-center gap-3 dark:text-[#81e6d9] text-[#2c7a7b] py-2 px-2 rounded-lg custom-transition"
           >
             <Icon size="18" name="mdi:discord" />
             <p class="text-lg max-sm:text-sm">@lucidiusss</p>
